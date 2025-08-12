@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Yoga Leisure | ロンドンのヨガ教室（日本のヨガも）| 英国 & 日本向け
+    </title>
+    <meta
+      name="description"
+      content="ロンドンのヨガ教室 Yoga Leisure。講師ジェーンが、ハタ/ヴィンヤサに日本のヨガ（経絡ストレッチ）を取り入れ、初心者から安心。英国/日本どちらの方も通いやすいスケジュール・価格（GBP/JPY）。体験は無料。"
+    />
+    <meta
+      name="keywords"
+      content="ロンドン ヨガ,日本のヨガ,経絡ヨガ,初心者 ヨガ,プライベート ヨガ,企業向け ヨガ, UK yoga, Japanese yoga London"
+    />
+    <link rel="alternate" hreflang="en" href="/" />
+    <link rel="alternate" hreflang="ja" href="/japanese.html" />
+    <link rel="alternate" hreflang="x-default" href="/" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2380cbc4'/%3E%3Cpath d='M32 14c8 0 14 6 14 14s-6 14-14 14S18 36 18 28s6-14 14-14zm0 8a6 6 0 100 12 6 6 0 000-12z' fill='white'/%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --panel: #10161d;
+        --brand: #7ad1c5;
+        --accent: #f1b24a;
+        --text: #eaf2f1;
+        --muted: #9fb2b0;
+        --radius: 16px;
+        --maxw: 1200px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP",
+          system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(1200px 700px at 10% 0%, #0d141b, var(--bg))
+          fixed;
+        line-height: 1.7;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      header {
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: saturate(1.2) blur(10px);
+        background: rgba(11, 15, 20, 0.6);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .nav {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0.75rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-weight: 700;
+      }
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: conic-gradient(
+          from 210deg,
+          var(--brand),
+          #9ef1e6,
+          var(--brand)
+        );
+        box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.08);
+      }
+      .navlinks {
+        margin-left: auto;
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+      }
+      .navlinks a {
+        padding: 0.55rem 0.8rem;
+        border-radius: 999px;
+        color: var(--muted);
+        border: 1px solid transparent;
+      }
+      .navlinks a:hover {
+        color: var(--text);
+        border-color: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .cta-btn {
+        background: linear-gradient(135deg, var(--brand), #b0f1e8);
+        color: #0a1114 !important;
+        font-weight: 700;
+      }
+      .burger {
+        display: none;
+        margin-left: auto;
+        background: transparent;
+        border: 0;
+        color: var(--text);
+        font-size: 1.25rem;
+      }
+      @media (max-width: 860px) {
+        .navlinks {
+          display: none;
+          position: absolute;
+          top: 62px;
+          right: 1rem;
+          background: var(--panel);
+          padding: 0.6rem;
+          border-radius: var(--radius);
+          box-shadow: var(--shadow);
+          width: min(92vw, 340px);
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .navlinks.open {
+          display: flex;
+        }
+        .burger {
+          display: block;
+        }
+      }
+
+      main.hero {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: clamp(2rem, 5vw, 4rem) 1rem 2rem;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+        align-items: center;
+      }
+      @media (max-width: 940px) {
+        main.hero {
+          grid-template-columns: 1fr;
+        }
+      }
+      .pill {
+        display: inline-flex;
+        gap: 0.5rem;
+        align-items: center;
+        padding: 0.35rem 0.7rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+        color: #d7fffa;
+        background: linear-gradient(
+          135deg,
+          rgba(122, 209, 197, 0.15),
+          rgba(122, 209, 197, 0.05)
+        );
+      }
+      h1 {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        line-height: 1.2;
+        margin: 0.2rem 0 1rem;
+      }
+      .hero-card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius);
+        padding: 1.25rem;
+        box-shadow: var(--shadow);
+      }
+
+      section {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 3rem 1rem;
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+      .sub {
+        color: var(--muted);
+      }
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+      }
+      .col-4 {
+        grid-column: span 4;
+      }
+      .col-6 {
+        grid-column: span 6;
+      }
+      .col-12 {
+        grid-column: span 12;
+      }
+      @media (max-width: 860px) {
+        .col-4,
+        .col-6 {
+          grid-column: span 12;
+        }
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius);
+        padding: 1rem;
+        box-shadow: var(--shadow);
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: 8px;
+        background: rgba(241, 178, 74, 0.15);
+        border: 1px solid rgba(241, 178, 74, 0.35);
+        color: #ffdca6;
+        font-size: 0.8rem;
+      }
+
+      .price {
+        font-size: 2rem;
+        font-weight: 800;
+      }
+      .price small {
+        font-size: 0.9rem;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .quote {
+        font-style: italic;
+        color: #d8efec;
+      }
+
+      footer {
+        margin-top: 3rem;
+        padding: 2rem 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--muted);
+      }
+      .footer-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+      @media (max-width: 860px) {
+        .footer-inner {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .promo {
+        background: linear-gradient(
+          90deg,
+          rgba(122, 209, 197, 0.15),
+          rgba(241, 178, 74, 0.15)
+        );
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .promo-inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0.6rem 1rem;
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .promo b {
+        color: #fff;
+      }
+      .floating-cta {
+        position: fixed;
+        bottom: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #0f151c;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 999px;
+        box-shadow: var(--shadow);
+        padding: 0.4rem 0.6rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        z-index: 1200;
+      }
+      .floating-cta .btn {
+        background: linear-gradient(135deg, var(--brand), #b0f1e8);
+        color: #071113;
+        border: 0;
+        border-radius: 999px;
+        padding: 0.55rem 0.9rem;
+        font-weight: 700;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Yoga Leisure",
+        "inLanguage": ["ja-JP", "en-GB"],
+        "areaServed": [
+          { "@type": "Country", "name": "United Kingdom" },
+          { "@type": "Country", "name": "Japan" }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "London",
+          "addressCountry": "GB"
+        },
+        "url": "https://example.com/ja/",
+        "sameAs": ["https://instagram.com/yourhandle"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Yoga classes",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Taster",
+              "price": 0,
+              "priceCurrency": "GBP"
+            },
+            {
+              "@type": "Offer",
+              "name": "Drop-in",
+              "price": 15,
+              "priceCurrency": "GBP"
+            },
+            {
+              "@type": "Offer",
+              "name": "5-pass",
+              "price": 65,
+              "priceCurrency": "GBP"
+            }
+          ]
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a class="brand" href="#home"
+          ><span class="logo" aria-hidden="true"></span
+          ><span>Yoga Leisure</span></a
+        >
+        <button
+          class="burger"
+          aria-label="メニューを開閉"
+          aria-controls="navlinks"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <div id="navlinks" class="navlinks">
+          <div
+            class="lang-currency"
+            style="
+              display: flex;
+              gap: 0.5rem;
+              align-items: center;
+              margin-right: 0.3rem;
+            "
+          >
+            <label class="sr-only" for="countrySel">Country</label>
+            <select
+              id="countrySel"
+              aria-label="Country"
+              style="
+                background: #0f151c;
+                color: var(--text);
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                border-radius: 8px;
+                padding: 0.3rem 0.5rem;
+              "
+            >
+              <option value="JP" selected>Japan</option>
+              <option value="UK">UK</option>
+            </select>
+            <label class="sr-only" for="currencySel">Currency</label>
+            <select
+              id="currencySel"
+              aria-label="Currency"
+              style="
+                background: #0f151c;
+                color: var(--text);
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                border-radius: 8px;
+                padding: 0.3rem 0.5rem;
+              "
+            >
+              <option value="JPY" selected>JPY ¥</option>
+              <option value="GBP">GBP £</option>
+            </select>
+          </div>
+          <a href="#classes">クラス</a>
+          <a href="#about">講師紹介</a>
+          <a href="#pricing">料金</a>
+          <a href="#schedule">スケジュール</a>
+          <a href="#contact">お問い合わせ</a>
+          <a href="#faq">よくある質問</a>
+          <a class="cta-btn" href="#contact" aria-label="無料体験を予約"
+            >無料体験を予約</a
+          >
+          <a href="/" lang="en" hreflang="en" style="margin-left: 0.3rem"
+            >English</a
+          >
+        </div>
+      </nav>
+      <div class="promo" role="region" aria-label="キャンペーン">
+        <div class="promo-inner">
+          <span>🎉 初回体験 <b>無料</b> + 友だち紹介で <b>各£5オフ</b>！</span>
+          <span id="countdown" aria-live="polite">終了まで: --:--:--</span>
+        </div>
+      </div>
+    </header>
+
+    <main id="home" class="hero">
+      <div>
+        <span class="pill"
+          >ロンドン • スタジオ & オンライン（UK/Japan対応）</span
+        >
+        <h1>やさしく、しっかり。心身が整うヨガを。</h1>
+        <p>
+          <strong>Yoga Leisure</strong
+          >は、講師ジェーンがハタ/ヴィンヤサに<strong>日本のヨガ（経絡ストレッチ）</strong>を取り入れた、少人数で安心のクラス。姿勢改善・肩こり・ストレスケアに。初心者歓迎。<b>英国</b>の方はスタジオへ、<b>日本</b>の方はJSTフレンドリーなオンラインへどうぞ。
+        </p>
+        <div class="hero-card" aria-label="無料体験のご案内">
+          <h3>まずは無料体験から</h3>
+          <p class="sub">押し売りなし。スタジオでもオンラインでもOK。</p>
+          <form id="tasterForm" novalidate>
+            <label
+              ><span class="sr-only">お名前</span
+              ><input
+                name="name"
+                type="text"
+                placeholder="お名前"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.8rem;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  background: #0f151c;
+                  color: var(--text);
+                  margin: 0.5rem 0;
+                "
+            /></label>
+            <label
+              ><span class="sr-only">メール</span
+              ><input
+                name="email"
+                type="email"
+                placeholder="メールアドレス"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.8rem;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  background: #0f151c;
+                  color: var(--text);
+                  margin: 0.5rem 0;
+                "
+            /></label>
+            <label
+              ><span class="sr-only">ご希望日</span
+              ><input
+                name="date"
+                type="date"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.8rem;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  background: #0f151c;
+                  color: var(--text);
+                  margin: 0.5rem 0;
+                "
+            /></label>
+            <button class="cta-btn" type="submit" style="width: 100%">
+              無料体験を申し込む
+            </button>
+            <p
+              id="tasterMsg"
+              class="sub"
+              role="status"
+              aria-live="polite"
+              style="margin: 0.5rem 0 0"
+            ></p>
+          </form>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>はじめてでも安心の理由</h3>
+        <ul>
+          <li>日本語サポートあり（必要に応じて）</li>
+          <li>少人数で丁寧にサポート</li>
+          <li>マット・プロップ完備／手ぶらOK</li>
+        </ul>
+        <a class="cta-btn" href="#classes">クラスを見る</a>
+      </div>
+    </main>
+
+    <section id="classes" aria-labelledby="classes-title">
+      <div class="section-head">
+        <h2 id="classes-title">クラス紹介</h2>
+        <p class="sub">
+          ロンドン・サウスバンクのスタジオ + ライブ配信（JST対応）
+        </p>
+      </div>
+      <div class="grid">
+        <article class="card col-4">
+          <span class="badge">初心者歓迎</span>
+          <h3>基礎（ハタ）</h3>
+          <p>
+            安全なアライメント、呼吸、経絡ストレッチで姿勢と安定感を養います。
+          </p>
+        </article>
+        <article class="card col-4">
+          <span class="badge">運動量◎</span>
+          <h3>フロー（ヴィンヤサ）</h3>
+          <p>呼吸に合わせた動きで体幹と柔軟性を高め、集中力もアップ。</p>
+        </article>
+        <article class="card col-4">
+          <span class="badge">リラックス</span>
+          <h3>陰ヨガ × 日本のヨガ</h3>
+          <p>長めのポーズで深部までゆるめ、消化や巡りを整えます。</p>
+        </article>
+        <article class="card col-6">
+          <span class="badge">オーダーメイド</span>
+          <h3>プライベート 1:1</h3>
+          <p>肩こり・腰痛ケア、柔軟性、メンタルケアなど目的に合わせて。</p>
+        </article>
+        <article class="card col-6">
+          <span class="badge">法人向け</span>
+          <h3>コーポレート・ウェルビーイング</h3>
+          <p>オフィスやオンラインで。姿勢リセットや集中力アップに。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="offer" aria-labelledby="offer-title">
+      <div class="section-head">
+        <h2 id="offer-title">無料体験 + 7日間ストレッチ講座（メール配信）</h2>
+        <p class="sub">
+          体験で、毎日3分の簡単ルーティンをプレゼント（動画＆PDF）
+        </p>
+      </div>
+      <div class="card">
+        <p>
+          「毎日続けられるか不安…」という方へ。<b>7日間のミニ講座</b>をメールでお届け。通勤前や就寝前にサクッとでき、肩・背中・腰がすっきりします。英国の方も日本の方も、同じ内容で受け取れます。
+        </p>
+        <ul>
+          <li>所要3–5分／日</li>
+          <li>器具不要・畳1枚のスペースでOK</li>
+          <li>スマホでも見やすい縦動画</li>
+        </ul>
+        <a class="cta-btn" href="#contact">無料で受け取る</a>
+      </div>
+    </section>
+
+    <section id="pricing" aria-labelledby="pricing-title">
+      <div class="section-head">
+        <h2 id="pricing-title">料金 / Pricing</h2>
+        <p class="sub">日本・英国どちらの方も分かりやすく（JPY/GBP 切替可）</p>
+      </div>
+      <div class="grid">
+        <div class="card col-4" data-animate>
+          <h3>初回体験 / Taster</h3>
+          <p class="price">
+            <span class="curr">¥</span><span class="amt" data-gbp="0">0</span>
+            <small>/ 初回 / first taster</small>
+          </p>
+          <ul>
+            <li>初心者歓迎</li>
+            <li>スタジオ or オンライン</li>
+            <li>勧誘なし</li>
+          </ul>
+          <a href="#contact" class="cta-btn" aria-label="無料体験を予約"
+            >予約する</a
+          >
+        </div>
+        <div class="card col-4" data-animate>
+          <h3>Drop‑in（単発）</h3>
+          <p class="price">
+            <span class="curr">¥</span
+            ><span class="amt" data-gbp="15">15</span> <small>/ 回</small>
+          </p>
+          <ul>
+            <li>どのクラスでも</li>
+            <li>マット・プロップ込み</li>
+            <li>録画48時間視聴可</li>
+          </ul>
+          <a href="#contact" class="cta-btn">予約する</a>
+        </div>
+        <div class="card col-4" data-animate>
+          <h3>5回チケット / 5‑Pass</h3>
+          <p class="price">
+            <span class="curr">¥</span><span class="amt" data-gbp="65">65</span>
+            <small>/ まとめてお得</small>
+          </p>
+          <ul>
+            <li>有効期限10週間</li>
+            <li>家族・友人とシェア可</li>
+            <li>優先予約</li>
+          </ul>
+          <a href="#contact" class="cta-btn">購入する</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" aria-labelledby="schedule-title">
+      <div class="section-head">
+        <h2 id="schedule-title">週間スケジュール（UK/Japan 対応）</h2>
+        <p class="sub">
+          South Bank Studio（SE1） + JSTフレンドリーなオンライン
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card col-6">
+          <h3>スタジオ（ロンドン時間）</h3>
+          <ul>
+            <li class="tz-row" data-day="Mon" data-time="18:30">
+              月 18:30 — 基礎
+            </li>
+            <li class="tz-row" data-day="Wed" data-time="07:30">
+              水 07:30 — フロー
+            </li>
+            <li class="tz-row" data-day="Thu" data-time="19:00">
+              木 19:00 — 陰ヨガ × 日本のヨガ
+            </li>
+            <li class="tz-row" data-day="Sat" data-time="10:00">
+              土 10:00 — フロー
+            </li>
+          </ul>
+        </div>
+        <div class="card col-6">
+          <h3>オンライン（自動でJST表示）</h3>
+          <ul id="onlineTimes">
+            <li class="tz-row" data-day="Tue" data-time="12:30">
+              火 12:30 — ランチタイム・ストレッチ
+            </li>
+            <li class="tz-row" data-day="Thu" data-time="07:45">
+              木 07:45 — 朝のモビリティ
+            </li>
+          </ul>
+          <p class="sub">＊下記に <b>東京時間</b> を自動表示します。</p>
+          <ul id="jstConverted" class="sub"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" aria-labelledby="testimonials-title">
+      <div class="section-head">
+        <h2 id="testimonials-title">受講者の声</h2>
+        <p class="sub">ロンドンで選ばれる理由</p>
+      </div>
+      <div class="grid">
+        <figure class="card col-4">
+          <blockquote class="quote">
+            「日本のヨガの要素が面白い！肩こりが楽になりました。」
+          </blockquote>
+          <figcaption class="sub">— サミー（ウォータールー）</figcaption>
+        </figure>
+        <figure class="card col-4">
+          <blockquote class="quote">
+            「丁寧でわかりやすい指導。仕事帰りにリセットできます。」
+          </blockquote>
+          <figcaption class="sub">— プリヤ（ロンドンブリッジ）</figcaption>
+        </figure>
+        <figure class="card col-4">
+          <blockquote class="quote">
+            「季節に合わせたテーマが好き。身体が整う感じ。」
+          </blockquote>
+          <figcaption class="sub">— アレックス（バーモンジー）</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <h2 id="faq-title">よくある質問</h2>
+        <p class="sub">はじめての方へ</p>
+      </div>
+      <details>
+        <summary>日本のヨガとは？</summary>
+        <p>
+          経絡理論や季節の考え方を取り入れ、消化や巡り、姿勢のバランスを整える実践です。
+        </p>
+      </details>
+      <details>
+        <summary>英語が不安です</summary>
+        <p>
+          必要に応じて日本語でサポートします。動きはシンプルで視覚的に理解しやすい内容です。
+        </p>
+      </details>
+      <details>
+        <summary>持ち物は？</summary>
+        <p>
+          動きやすい服とお水のみ。スタジオではマットやプロップをご用意しています。
+        </p>
+      </details>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title">お問い合わせ</h2>
+        <p class="sub">ご予約・ご質問はこちら（UK/Japan 対応）</p>
+      </div>
+      <div class="grid">
+        <div class="card col-6">
+          <h3>メール / 電話 / LINE</h3>
+          <p class="sub">
+            Email
+            <a href="mailto:hello@yogaleisure.co.uk">hello@yogaleisure.co.uk</a>
+            / Tel <a href="tel:+442079460123">+44 20 7946 0123</a>
+          </p>
+          <form id="contactForm" novalidate>
+            <label
+              ><span class="sr-only">お名前</span
+              ><input
+                name="name"
+                type="text"
+                placeholder="お名前"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.8rem;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  background: #0f151c;
+                  color: var(--text);
+                  margin: 0.5rem 0;
+                "
+            /></label>
+            <label
+              ><span class="sr-only">メール</span
+              ><input
+                name="email"
+                type="email"
+                placeholder="メールアドレス"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.8rem;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  background: #0f151c;
+                  color: var(--text);
+                  margin: 0.5rem 0;
+                "
+            /></label>
+            <label
+              ><span class="sr-only">メッセージ</span
+              ><textarea
+                name="message"
+                placeholder="ご用件"
+                rows="4"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.8rem;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  background: #0f151c;
+                  color: var(--text);
+                  margin: 0.5rem 0;
+                "
+              ></textarea>
+            </label>
+            <button class="cta-btn" type="submit">送信する</button>
+            <p
+              id="contactMsg"
+              class="sub"
+              role="status"
+              aria-live="polite"
+              style="margin: 0.5rem 0 0"
+            ></p>
+          </form>
+          <p class="sub" style="margin-top: 0.4rem">
+            LINE: <b>@yogaleisure</b>（日本の方のご相談に）
+          </p>
+        </div>
+        <div class="card col-6">
+          <h3>アクセス</h3>
+          <p>South Bank Studio, 123 Riverside Way, London SE1 2AB</p>
+          <div
+            style="
+              aspect-ratio: 16/9;
+              border-radius: 12px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              background: #0f151c;
+              display: grid;
+              place-items: center;
+            "
+          >
+            <p class="sub">地図（Google Maps 埋め込み可）</p>
+          </div>
+          <p class="sub">Tube: Waterloo / London Bridge • Buses: 381, RV1</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="brand" style="margin-bottom: 0.6rem">
+            <span class="logo" aria-hidden="true"></span
+            ><span>Yoga Leisure</span>
+          </div>
+          <p class="sub">
+            ロンドンでのヨガ（日本のヨガの要素あり）。スタジオ＆オンライン。©
+            <span id="year"></span> Yoga Leisure.
+          </p>
+        </div>
+        <div>
+          <strong>リンク</strong>
+          <ul class="sub">
+            <li><a href="#classes">クラス</a></li>
+            <li><a href="#pricing">料金</a></li>
+            <li><a href="#schedule">スケジュール</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="/" hreflang="en">English</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>ポリシー</strong>
+          <ul class="sub">
+            <li>プライバシー</li>
+            <li>利用規約</li>
+            <li>健康上の注意</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu
+      const burger = document.querySelector(".burger");
+      const navlinks = document.getElementById("navlinks");
+      burger?.addEventListener("click", () => {
+        const isOpen = navlinks.classList.toggle("open");
+        burger.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      // Year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Forms (demo)
+      const re = /\S+@\S+\.[\w-]{2,}$/;
+      function bindForm(formId, msgId) {
+        const f = document.getElementById(formId);
+        const m = document.getElementById(msgId);
+        f.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const data = Object.fromEntries(new FormData(f).entries());
+          if (
+            !data.name ||
+            !data.email ||
+            (data.message !== undefined && !data.message)
+          ) {
+            m.textContent = "未入力の項目があります。";
+            m.style.color = "#ff6b6b";
+            return;
+          }
+          if (!re.test(data.email)) {
+            m.textContent = "メールアドレスをご確認ください。";
+            m.style.color = "#ff6b6b";
+            return;
+          }
+          m.textContent = "ありがとうございます！24時間以内にご連絡します。";
+          m.style.color = "#eaf2f1";
+          f.reset();
+        });
+      }
+      bindForm("tasterForm", "tasterMsg");
+      bindForm("contactForm", "contactMsg");
+
+      // Countdown (キャンペーン期限を今から7日に設定)
+      const endJP = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+      const elCD = document.getElementById("countdown");
+      const pad = (n) => String(n).padStart(2, "0");
+      setInterval(() => {
+        const diff = endJP - new Date();
+        if (diff <= 0) {
+          elCD.textContent = "本日まで";
+          return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        elCD.textContent = `終了まで: ${d}日 ${pad(h)}:${pad(m)}:${pad(s)}`;
+      }, 1000);
+
+      // --- Currency & country toggle ---
+      (function () {
+        const FX_GBP_JPY = 185; // approx; update as needed
+        const currSel = document.getElementById("currencySel");
+        const countrySel = document.getElementById("countrySel");
+        function applyCurrency() {
+          const useGBP = currSel?.value === "GBP";
+          document.querySelectorAll(".amt").forEach((el) => {
+            const gbp = parseFloat(el.getAttribute("data-gbp")) || 0;
+            const val = useGBP ? gbp : Math.round(gbp * FX_GBP_JPY);
+            el.textContent = val.toLocaleString(useGBP ? "en-GB" : "ja-JP");
+          });
+          document.querySelectorAll(".curr").forEach((el) => {
+            el.textContent = useGBP ? "£" : "¥";
+          });
+          localStorage.setItem("yl_currency", currSel.value);
+        }
+        function init() {
+          const saved = localStorage.getItem("yl_currency");
+          if (saved) {
+            currSel.value = saved;
+          }
+          applyCurrency();
+          currSel?.addEventListener("change", applyCurrency);
+          countrySel?.addEventListener("change", () => {
+            if (countrySel.value === "UK") {
+              window.location.href = "/";
+            }
+          });
+        }
+        init();
+      })();
+
+      // --- Online JST conversion ---
+      (function () {
+        const out = document.getElementById("jstConverted");
+        if (!out) return;
+        const base = new Date();
+        const next = (dow) => {
+          const d = new Date(base);
+          const diff = (dow - d.getDay() + 7) % 7;
+          d.setDate(d.getDate() + diff);
+          return d;
+        };
+        const map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+        const rows = document.querySelectorAll("#onlineTimes .tz-row");
+        out.innerHTML = "";
+        rows.forEach((li) => {
+          const day = li.getAttribute("data-day");
+          const hm = li.getAttribute("data-time");
+          const [H, M] = hm.split(":").map(Number);
+          const d = next(map[day]);
+          d.setHours(H, M, 0, 0);
+          const fmtUK = new Intl.DateTimeFormat("en-GB", {
+            weekday: "short",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+            timeZone: "Europe/London",
+          });
+          const fmtJP = new Intl.DateTimeFormat("ja-JP", {
+            weekday: "short",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+            timeZone: "Asia/Tokyo",
+          });
+          const uk = fmtUK.format(d);
+          const jp = fmtJP.format(d);
+          const liOut = document.createElement("li");
+          liOut.textContent = `UK ${uk} → 日本 ${jp}`;
+          out.appendChild(liOut);
+        });
+      })();
+    </script>
+  </body>
+</html>

